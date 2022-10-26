@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ImagenController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Route::get('/user/{id}', [UserController::class, 'mostrar']);
 Route::post('registrar', [UserController::class, 'registro']);
+Route::post('login', [UserController::class, 'login']);
+Route::post('imagen',[ImagenController::class, 'imagenStore']);
+
